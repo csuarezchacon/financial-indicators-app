@@ -1,0 +1,12 @@
+<h2>Lista de indicadores</h2>
+
+<mat-nav-list>
+   <mat-list-item *ngFor="let indicator of indicators">
+      <p (click)="getIndicators(indicator.id)">
+         {{indicator.name}}
+      </p>
+      <button mat-icon-button matListItemMeta (click)="getIndicatorsInfo(indicator.id)">
+         <mat-icon>info</mat-icon>
+      </button>
+   </mat-list-item>
+</mat-nav-list>
